@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "docopt": "^0.6.2",
     "keypress": "^0.2.1",
     "noble": "^1.9.0",
     "rolling-spider": "^1.7.0",
