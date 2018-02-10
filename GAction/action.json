@@ -1,0 +1,46 @@
+{
+  "actions": [
+    {
+      "description": "Init and takeoff",
+      "name": "MAIN",
+      "fulfillment": {
+        "conversationName": "greeting"
+      },
+      "intent": {
+        "name": "actions.intent.MAIN",
+        "trigger": {
+          "queryPatterns": [
+            "talk to drony"
+          ]
+        }
+      }
+    },
+    {
+      "description": "Move",
+      "name": "MOVE",
+      "fulfillment": {
+        "conversationName": "greeting"
+      },
+      "intent": {
+        "name": "custom.MOVE",
+        "parameters": [{
+          "name": "direction",
+          "type": "Direction"
+        }],
+        "trigger": {
+          "queryPatterns": [
+            "fly $Direction:direction",
+            "move $Direction:direction"
+          ]
+        }
+      }
+    }
+  ],
+  "conversations": {
+    "greeting": {
+      "name": "greeting",
+      "url": "https://us-central1-test2-15937.cloudfunctions.net/greeting"
+    }
+  },
+  "locale": "en"
+}
